@@ -1,16 +1,28 @@
 import HeroBackgroundImage from "@/assets/img/bg/HeroBackgroundImage.png";
+
+import MuxPlayer from "@mux/mux-player-react";
 import { NavLink } from "react-router";
 import { Button } from "./button";
 
 export default function HeroSection() {
   return (
-    <div className="relative h-[800px] w-full">
+    <div id="inicio" className="relative h-[800px] w-full">
       {/* Background Image - Desktop & Mobile */}
       <div className="absolute inset-0 z-0">
         <div className="relative h-full w-full">
           <img
+            className="hidden"
             src={HeroBackgroundImage}
             alt="Entrance of a home with stone path"
+          />
+
+          <MuxPlayer
+            playbackId="S3UvARmcdjapTpayHMVKvddNtw01AjgY151WnxtqtNR00"
+            metadata={{
+              video_title: "Residencia Quintazur Tlalpan",
+            }}
+            autoPlay={true}
+            loop={true}
             className="h-full w-full object-cover"
           />
           {/* Dark overlay for better text visibility */}

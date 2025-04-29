@@ -20,9 +20,9 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#0033A1]">
-      <div className="mx-auto mt-12 flex max-w-[1800px] flex-col items-center justify-between gap-12 px-12 py-12 lg:mt-24 lg:flex-row lg:gap-0 lg:py-24">
+      <div className="mx-auto mt-12 flex max-w-[1800px] flex-col items-start justify-between gap-12 px-4 py-12 lg:mt-24 lg:flex-row lg:items-center lg:gap-0 lg:px-12 lg:py-24">
         <div className="flex items-center gap-4">
-          <img src={LOGO} alt="logo" className="w-32" />
+          <img src={LOGO} alt="logo" className="w-24 lg:w-32" />
           <NavLink to="/">
             <h1 className="text-3xl font-light text-white lg:text-4xl">
               Nuestro propósito <br />

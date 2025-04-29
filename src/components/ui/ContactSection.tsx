@@ -31,25 +31,28 @@ const ContactSection = () => {
   // };
 
   return (
-    <section id="contacto" className="mx-auto min-w-full max-w-5xl px-4 py-16 md:px-8 md:py-24">
+    <section
+      id="contacto"
+      className="mx-auto min-w-full max-w-7xl px-4 py-16 md:px-8 md:py-24"
+    >
       {/* Encabezado y Título */}
       <div className="mb-12 text-center md:mb-16">
         <h3 className="poppins mb-6 text-sm font-semibold uppercase tracking-wider text-[#6D6D6D]">
           Contacto
         </h3>
-        <h2 className="mb-4 text-3xl font-light text-blue-800 md:text-4xl lg:text-5xl">
+        <h2 className="mb-4 text-3xl font-light text-blue-800 md:text-4xl lg:text-6xl">
           Vivir plenamente
           <br />
           es saber que nunca estás solo.
         </h2>
-        <p className="mx-auto mt-12 max-w-xl text-lg text-[#6D6D6D]">
+        <p className="mx-auto mt-4 max-w-xl text-lg text-[#6D6D6D] lg:mt-12">
           Si estás interesado en formar parte de nuestra comunidad, <br />{" "}
           déjanos tus datos y en breve nos pondremos en contacto contigo.
         </p>
       </div>
 
       {/* Formulario */}
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-7xl">
         <Form {...form}>
           <form
             onSubmit={() => console.log("hola")}
@@ -64,7 +67,7 @@ const ContactSection = () => {
                 name="nombre"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="poppins text-sm font-medium uppercase tracking-wider text-[#6D6D6D]">
+                    <FormLabel className="poppins text-sm font-semibold uppercase tracking-wider text-[#6D6D6D]">
                       Nombre
                     </FormLabel>
                     <FormControl>
@@ -84,7 +87,7 @@ const ContactSection = () => {
                 name="apellidos"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="poppins text-sm font-medium uppercase tracking-wider text-[#6D6D6D]">
+                    <FormLabel className="poppins text-sm font-semibold uppercase tracking-wider text-[#6D6D6D]">
                       Apellidos
                     </FormLabel>
                     <FormControl>
@@ -104,7 +107,7 @@ const ContactSection = () => {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="poppins text-sm font-medium uppercase tracking-wider text-[#6D6D6D]">
+                    <FormLabel className="poppins text-sm font-semibold uppercase tracking-wider text-[#6D6D6D]">
                       Correo Electrónico
                     </FormLabel>
                     <FormControl>
@@ -125,7 +128,7 @@ const ContactSection = () => {
                 name="telefono"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="poppins text-sm font-medium uppercase tracking-wider text-[#6D6D6D]">
+                    <FormLabel className="poppins text-sm font-semibold uppercase tracking-wider text-[#6D6D6D]">
                       Teléfono
                     </FormLabel>
                     <FormControl>
@@ -145,7 +148,7 @@ const ContactSection = () => {
             <div className="space-y-6 text-left">
               {/* Opciones de Residencia */}
               <div>
-                <h4 className="poppins mb-4 text-sm font-medium uppercase tracking-wider text-[#6D6D6D]">
+                <h4 className="poppins mb-4 text-sm font-semibold uppercase tracking-wider text-[#6D6D6D]">
                   Residencia
                 </h4>
                 <FormField
@@ -164,7 +167,7 @@ const ContactSection = () => {
                               <RadioGroupItem
                                 value="para_mi"
                                 id="para_mi"
-                                className="border-2 text-blue-800"
+                                className="h-6 w-6 border border-[#C6C6C6] text-blue-800"
                               />
                             </FormControl>
                             <Label htmlFor="para_mi" className="font-normal">
@@ -176,7 +179,7 @@ const ContactSection = () => {
                               <RadioGroupItem
                                 value="para_mis_papas"
                                 id="para_mis_papas"
-                                className="border-2 text-blue-800"
+                                className="h-6 w-6 border border-[#C6C6C6] text-blue-800"
                               />
                             </FormControl>
                             <Label
@@ -191,7 +194,7 @@ const ContactSection = () => {
                               <RadioGroupItem
                                 value="otros"
                                 id="otros"
-                                className="border-2 text-blue-800"
+                                className="h-6 w-6 border border-[#C6C6C6] text-blue-800"
                               />
                             </FormControl>
                             <Label htmlFor="otros" className="font-normal">
@@ -212,7 +215,7 @@ const ContactSection = () => {
                 name="mensaje"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="poppins text-sm font-medium uppercase tracking-wider text-[#6D6D6D]">
+                    <FormLabel className="poppins text-sm font-semibold uppercase tracking-wider text-[#6D6D6D]">
                       Mensaje
                     </FormLabel>
                     <FormControl>

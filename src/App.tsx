@@ -13,7 +13,7 @@ import ContactSection from "./components/ui/ContactSection";
 
 function App() {
   return (
-    <main className="grid gap-36">
+    <main className="grid gap-12 lg:gap-36">
       <HeroSection />
       <HomeAboutSection />
       <AchievmentsSection archievementsSection={achievementsSection} />

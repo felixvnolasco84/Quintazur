@@ -19,7 +19,7 @@ export default function AchievmentsSection({
         </span>
         <h3 className="text-2xl font-light text-[#0033A1] lg:max-w-6xl lg:text-6xl">
           Cuidarte con respeto <br />
-          <span className="noto-serif-display font-light italic text-blue-700">
+          <span className="noto-serif-display font-light italic text-[#0033A1]">
             es acompañarte en tu independencia.
           </span>
         </h3>
