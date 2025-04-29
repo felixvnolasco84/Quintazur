@@ -14,29 +14,29 @@ export default function AmenitiesSection() {
       id="experiencia"
       className="bg-[#00524E] py-16 text-white md:py-24"
     >
-      <div className="mx-auto w-full max-w-[1800px] px-4 md:px-8">
+      <div className="mx-auto w-full max-w-7xl px-4 lg:px-14">
         <div className="grid grid-cols-1 gap-12 md:gap-32">
           <div className="grid">
-            <h3 className="poppins mb-4 text-left text-sm font-semibold uppercase tracking-wider text-white">
+            <h3 className="poppins mb-4 text-center text-sm font-semibold uppercase tracking-wider text-white lg:text-left">
               Experiencia
             </h3>
             <div className="flex flex-col items-start justify-between lg:flex-row">
               {/* Columna izquierda - Título y descripción */}
-              <div className="flex flex-col items-start justify-start">
-                <h2 className="mb-12 text-left text-3xl font-light md:text-4xl lg:text-5xl lg:leading-[60px]">
+              <div className="flex w-full flex-col items-start justify-start lg:w-1/2">
+                <h2 className="mb-6 w-full text-center text-3xl font-light md:text-4xl lg:mb-12 lg:text-left lg:text-5xl lg:leading-[60px]">
                   Amenidades diseñadas
                   <span className="noto-serif-display block font-light italic">
                     para tu bienestar.
                   </span>
                 </h2>
-                <NavLink to="/#contacto">
-                  <Button className="h-11 w-fit rounded-full bg-[#789C4A] px-11 py-3 text-sm font-medium uppercase tracking-wider text-white transition-colors duration-300 hover:bg-blue-800">
+                <NavLink to="/#contacto" className="w-full">
+                  <Button className="h-11 w-full rounded-full bg-[#789C4A] px-11 py-3 text-sm font-medium uppercase tracking-wider text-white transition-colors duration-300 hover:bg-blue-800 lg:w-fit">
                     Agenda una cita
                   </Button>
                 </NavLink>
               </div>
-              <div className="mt-12 lg:mt-4">
-                <p className="max-w-lg text-left text-2xl font-light text-white lg:leading-[40px]">
+              <div className="mt-8 lg:mt-4">
+                <p className="max-w-lg text-left text-lg font-light text-white lg:text-2xl lg:leading-[40px]">
                   Desde un restaurante bistró y espacios para la vida social,
                   hasta una tarde en el jardín con tu familia, cada amenidad ha
                   sido cuidadosamente diseñada para ofrecerte confort,

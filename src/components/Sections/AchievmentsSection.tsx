@@ -13,7 +13,7 @@ export default function AchievmentsSection({
       id="cuidados"
       className="gap-12 bg-[#F8FCEF] px-4 py-12 lg:px-0 lg:py-24"
     >
-      <div className="mx-auto grid max-w-[1800px] items-center justify-center justify-items-center">
+      <div className="mx-auto grid max-w-7xl items-center justify-center justify-items-center">
         <span className="poppins mb-8 text-sm font-semibold text-[#6D6D6D]">
           {achievementsSection.description}
         </span>

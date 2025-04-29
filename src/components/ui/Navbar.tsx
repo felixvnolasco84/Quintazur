@@ -62,15 +62,15 @@ export default function Navbar() {
   return (
     <div className="sticky top-0 z-40 grid">
       <div className="grid h-12 items-center justify-center bg-[#0033A1] text-white">
-        <a href="tel:+52-55-1234-5678" target="_blank" rel="noreferrer">
+        <a href="tel:+525558125581" target="_blank" rel="noreferrer">
           <p>
             Te acompañamos en cada momento:{" "}
-            <span className="text-[#48A0FF]">+52 (55) 1234 5678</span>{" "}
+            <span className="text-[#48A0FF]">+52 (55) 5812 5581</span>{" "}
           </p>
         </a>
       </div>
       <header className="bg-white px-4 py-4 sm:px-6 lg:px-8">
-        <div className="mx-auto flex max-w-[1800px] items-center justify-between">
+        <div className="mx-auto flex max-w-7xl items-center justify-between">
           <NavLink onClick={() => scrollToSection("inicio")} to="/">
             <img src={Logo} className="h-16 w-auto" alt="Logo" />
           </NavLink>

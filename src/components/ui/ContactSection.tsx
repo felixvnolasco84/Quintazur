@@ -33,7 +33,7 @@ const ContactSection = () => {
   return (
     <section
       id="contacto"
-      className="mx-auto min-w-full max-w-7xl px-4 py-16 md:px-8 md:py-24"
+      className="mx-auto w-full max-w-7xl px-4 py-16 md:px-8 md:py-24 lg:px-14"
     >
       {/* Encabezado y Título */}
       <div className="mb-12 text-center md:mb-16">
@@ -235,7 +235,7 @@ const ContactSection = () => {
             <div className="mt-4 flex justify-center md:col-span-2">
               <Button
                 type="submit"
-                className="rounded-full bg-blue-800 px-12 py-3 text-sm font-medium uppercase tracking-wider text-white transition-colors duration-300 hover:bg-blue-900"
+                className="w-full rounded-full bg-blue-800 px-12 py-3 text-sm font-medium uppercase tracking-wider text-white transition-colors duration-300 hover:bg-blue-900 lg:w-fit"
               >
                 Enviar
               </Button>

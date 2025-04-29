@@ -5,7 +5,7 @@ export default function VideoSection() {
   return (
     <section
       id="comunidades"
-      className="mx-auto w-full max-w-[1800px] px-4 py-16 md:px-0 md:py-24"
+      className="mx-auto w-full max-w-7xl px-4 py-16 md:px-14 md:py-24"
     >
       {/* Encabezado y Título */}
       <div className="mb-8 text-center md:mb-12">
