@@ -23,9 +23,9 @@ export default function HeroSection() {
         <div className="max-w-4xl">
           {/* Main Heading - Larger on desktop, smaller on mobile */}
           <h1 className="mb-2 text-4xl font-light text-white md:text-6xl">
-            No somos una casa,
-            <span className="mt-1 block font-normal italic">
-              somos un hogar
+            Somos una residencia
+            <span className="noto-serif-display mt-1 block font-light italic">
+              a la que se le puede llamar hogar.
             </span>
           </h1>
 
@@ -38,7 +38,7 @@ export default function HeroSection() {
           {/* CTA Button - Slightly different sizing for mobile */}
           <div className="mt-10 md:mt-12">
             <NavLink to="/#nosotros">
-              <Button className="rounded-full bg-[#0033A1] px-8 py-3 text-sm font-medium uppercase tracking-wider text-white transition-colors duration-300 hover:bg-blue-800">
+              <Button className="h-11 rounded-full bg-[#0033A1] px-11 py-3 text-sm font-medium uppercase tracking-wider text-white transition-colors duration-300 hover:bg-blue-800">
                 Quiero saber más
               </Button>
             </NavLink>

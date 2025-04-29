@@ -8,37 +8,37 @@ import {
 
 
 import Independiente from "@/assets/img/slider/Independiente.png";
-import Moderadadependencia from "@/assets/img/slider/Moderadadependencia.png";
-import Altadependencia from "@/assets/img/slider/Altadependencia.png";
-import Memorycare from "@/assets/img/slider/Memorycare.png";
+import vidaAsistida from "@/assets/img/slider/vidaAsistida.png";
+import Altadependencia from "@/assets/img/slider/Altadependencia.png"; 
+import Memorycare from "@/assets/img/slider/memory.png"; 
 
 export const achievementsSection: AchievementsSectionInterface = {
-  title: "Cuidarte con amor es acompañarte en tu indeependencia.",
+  title: "Cuidarte con respeto es acompañarte en tu independencia.",
   description: "CUIDADOS",
   achievements: [
     {
       title: "Independiente",
       image: Independiente,
       description:
-        "Claritas est etiam processusa icus, nuiser sequitur mutationem",
+        "Ser independiente es poder realizar tus actividades como lo haces normalmente, con todo el confort y la tranquilidad de saber que siempre encontrarás apoyo si lo necesitas.",
     },
     {
-      title: "Moderada dependencia",
-      image: Moderadadependencia,
+      title: "Vida asistida",
+      image: vidaAsistida,
       description:
-        "Claritas est etiam processusa icus, nuiser sequitur mutationem",
+        "Te ayudamos a realizar tareas de la vida diaria que te van costando trabajo, para que puedas dedicarte a disfrutar del día. Contarás con un equipo que estará para cuidarte.",
     },
     {
       title: "Alta dependencia",
       image: Altadependencia,
       description:
-        "Claritas est etiam processusa icus, nuiser sequitur mutationem",
+        "Nuestra misión es acompañarte. Sabemos que no es fácil necesitar apoyo en cada momento. Por ello, siempre hay algo que podemos hacer para que cada día esté lleno de sentido.",
     },
     {
       title: "Memory care",
       image: Memorycare,
       description:
-        "Claritas est etiam processusa icus, nuiser sequitur mutationem",
+        "Cada gesto cuenta sin importar si lo recuerdan. Los cuidamos considerando el tipo de demencia o deterioro cognitivo que tengan, siempre de la mano de especialistas.",
     },
   ],
 };

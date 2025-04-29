@@ -31,20 +31,20 @@ const ContactSection = () => {
   // };
 
   return (
-    <section className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-24">
+    <section id="contacto" className="mx-auto min-w-full max-w-5xl px-4 py-16 md:px-8 md:py-24">
       {/* Encabezado y Título */}
       <div className="mb-12 text-center md:mb-16">
-        <h3 className="mb-6 text-sm font-medium uppercase tracking-wider text-gray-600">
+        <h3 className="poppins mb-6 text-sm font-semibold uppercase tracking-wider text-[#6D6D6D]">
           Contacto
         </h3>
-        <h2 className="mb-4 text-3xl font-medium text-blue-800 md:text-4xl lg:text-5xl">
+        <h2 className="mb-4 text-3xl font-light text-blue-800 md:text-4xl lg:text-5xl">
           Vivir plenamente
           <br />
           es saber que nunca estás solo.
         </h2>
-        <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-600">
-          Si estás interesado en formar parte de nuestra comunidad, déjanos tus
-          datos y en breve nos pondremos en contacto contigo.
+        <p className="mx-auto mt-12 max-w-xl text-lg text-[#6D6D6D]">
+          Si estás interesado en formar parte de nuestra comunidad, <br />{" "}
+          déjanos tus datos y en breve nos pondremos en contacto contigo.
         </p>
       </div>
 
@@ -52,25 +52,25 @@ const ContactSection = () => {
       <div className="mx-auto max-w-5xl">
         <Form {...form}>
           <form
-            onSubmit={()=> console.log("hola")}
+            onSubmit={() => console.log("hola")}
             // onSubmit={form.handleSubmit(onSubmit)}
             className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2"
           >
             {/* Columna izquierda */}
-            <div className="space-y-6">
+            <div className="space-y-6 text-left">
               {/* Nombre */}
               <FormField
                 control={form.control}
                 name="nombre"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-sm font-medium uppercase tracking-wider text-gray-600">
+                    <FormLabel className="poppins text-sm font-medium uppercase tracking-wider text-[#6D6D6D]">
                       Nombre
                     </FormLabel>
                     <FormControl>
                       <Input
                         {...field}
-                        className="rounded-none border-b border-gray-300 px-0 focus-visible:border-blue-800 focus-visible:ring-0"
+                        className="rounded-none border-b border-l-0 border-r-0 border-t-0 border-gray-300 px-0 focus-visible:border-blue-800 focus-visible:ring-0"
                       />
                     </FormControl>
                     <FormMessage />
@@ -84,13 +84,13 @@ const ContactSection = () => {
                 name="apellidos"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-sm font-medium uppercase tracking-wider text-gray-600">
+                    <FormLabel className="poppins text-sm font-medium uppercase tracking-wider text-[#6D6D6D]">
                       Apellidos
                     </FormLabel>
                     <FormControl>
                       <Input
                         {...field}
-                        className="rounded-none border-b border-gray-300 px-0 focus-visible:border-blue-800 focus-visible:ring-0"
+                        className="rounded-none border-b border-l-0 border-r-0 border-t-0 border-gray-300 px-0 focus-visible:border-blue-800 focus-visible:ring-0"
                       />
                     </FormControl>
                     <FormMessage />
@@ -104,14 +104,14 @@ const ContactSection = () => {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-sm font-medium uppercase tracking-wider text-gray-600">
+                    <FormLabel className="poppins text-sm font-medium uppercase tracking-wider text-[#6D6D6D]">
                       Correo Electrónico
                     </FormLabel>
                     <FormControl>
                       <Input
                         {...field}
                         type="email"
-                        className="rounded-none border-b border-gray-300 px-0 focus-visible:border-blue-800 focus-visible:ring-0"
+                        className="rounded-none border-b border-l-0 border-r-0 border-t-0 border-gray-300 px-0 focus-visible:border-blue-800 focus-visible:ring-0"
                       />
                     </FormControl>
                     <FormMessage />
@@ -125,14 +125,14 @@ const ContactSection = () => {
                 name="telefono"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-sm font-medium uppercase tracking-wider text-gray-600">
+                    <FormLabel className="poppins text-sm font-medium uppercase tracking-wider text-[#6D6D6D]">
                       Teléfono
                     </FormLabel>
                     <FormControl>
                       <Input
                         {...field}
                         type="tel"
-                        className="rounded-none border-b border-gray-300 px-0 focus-visible:border-blue-800 focus-visible:ring-0"
+                        className="rounded-none border-b border-l-0 border-r-0 border-t-0 border-gray-300 px-0 shadow-none focus-visible:border-blue-800 focus-visible:ring-0"
                       />
                     </FormControl>
                     <FormMessage />
@@ -142,10 +142,10 @@ const ContactSection = () => {
             </div>
 
             {/* Columna derecha */}
-            <div className="space-y-6">
+            <div className="space-y-6 text-left">
               {/* Opciones de Residencia */}
               <div>
-                <h4 className="mb-4 text-sm font-medium uppercase tracking-wider text-gray-600">
+                <h4 className="poppins mb-4 text-sm font-medium uppercase tracking-wider text-[#6D6D6D]">
                   Residencia
                 </h4>
                 <FormField
@@ -212,7 +212,7 @@ const ContactSection = () => {
                 name="mensaje"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-sm font-medium uppercase tracking-wider text-gray-600">
+                    <FormLabel className="poppins text-sm font-medium uppercase tracking-wider text-[#6D6D6D]">
                       Mensaje
                     </FormLabel>
                     <FormControl>

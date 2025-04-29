@@ -48,7 +48,7 @@ export default function Navbar() {
       href: "/#comunidades",
     },
     {
-      title: "Expereincia",
+      title: "Experiencia",
       id: "experiencia",
       href: "/#experiencia",
     },
@@ -60,8 +60,8 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="bg-white py-4 sm:px-6 lg:px-8">
-      <div className="sticky top-0 z-40 mx-auto flex max-w-[1800px] items-center justify-between">
+    <header className="sticky top-0 z-40 bg-white py-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-[1800px] items-center justify-between">
         <NavLink onClick={() => scrollToSection("inicio")} to="/">
           <img src={Logo} className="h-16 w-auto" alt="Logo" />
         </NavLink>

@@ -10,13 +10,18 @@ export default function AchievmentsSection({
 }) {
   return (
     <div
-      id="mision"
+      id="cuidados"
       className="gap-12 bg-[#F8FCEF] px-4 py-12 lg:px-0 lg:py-24"
     >
       <div className="mx-auto grid max-w-[1800px] items-center justify-center justify-items-center">
-        <span>{achievementsSection.description}</span>
-        <h3 className="text-2xl font-bold text-[#0033A1] lg:max-w-4xl lg:text-4xl">
-          {archievementsSection.title}
+        <span className="poppins mb-8 text-sm font-semibold text-[#6D6D6D]">
+          {achievementsSection.description}
+        </span>
+        <h3 className="text-2xl font-light text-[#0033A1] lg:max-w-6xl lg:text-6xl">
+          Cuidarte con respeto <br />
+          <span className="noto-serif-display font-light italic text-blue-700">
+            es acompañarte en tu independencia.
+          </span>
         </h3>
         <CarouselComponent>
           {archievementsSection.achievements.map((achivement, index) => (
@@ -27,11 +32,11 @@ export default function AchievmentsSection({
                   alt="Imagen de un hombre con una mano sostenida"
                   className="aspect-square h-full w-full object-cover"
                 />
-                <div className="flex flex-col gap-2">
+                <div className="mt-6 flex flex-col gap-2">
                   <h3 className="bg-gradient-to-r bg-clip-text text-left text-2xl font-bold text-[#0033A1]">
                     {achivement.title}
                   </h3>
-                  <p className="text-left text-lg leading-relaxed text-[#6D6D6D]">
+                  <p className="text-left text-lg text-[#6D6D6D] lg:max-w-[275px]">
                     {achivement.description}
                   </p>
                 </div>

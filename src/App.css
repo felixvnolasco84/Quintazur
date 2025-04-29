@@ -1,6 +1,8 @@
 #root {
   margin: 0 auto;
   text-align: center;
+  font-family: 'Fustat',
+    sans-serif;
 }
 
 .logo {
@@ -68,4 +70,17 @@
   font-size: 14px;
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
+}
+
+
+.noto-serif-display {
+    font-family: 'Noto Serif Display', serif;
+}
+
+.fustat {
+    font-family: 'Fustat', sans-serif;
+}
+
+.poppins {
+  font-family: "Poppins", sans-serif;
 }
