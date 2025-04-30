@@ -24,12 +24,26 @@ const ContactSection = () => {
       mensaje: "",
     },
   });
-
-  // const onSubmit = (data) => {
-  //   console.log(data);
-  //   // Aquí puedes implementar la lógica para enviar los datos a tu servidor
-  // };
-
+  
+const onSubmit = async (dataValues: {
+  nombre: string;
+  apellidos: string;
+  email: string;
+  telefono: string;
+  residencia: string;
+  mensaje: string;
+}) => {
+  const response = await fetch(
+    "https://quintazur-mail-service.vercel.app/send-email",
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(dataValues),
+    }
+  );
+  const data = await response.json();
+  alert(data.message);
+};
   return (
     <section
       id="contacto"
@@ -55,8 +69,7 @@ const ContactSection = () => {
       <div className="mx-auto max-w-7xl">
         <Form {...form}>
           <form
-            onSubmit={() => console.log("hola")}
-            // onSubmit={form.handleSubmit(onSubmit)}
+            onSubmit={form.handleSubmit(onSubmit)}
             className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2"
           >
             {/* Columna izquierda */}
