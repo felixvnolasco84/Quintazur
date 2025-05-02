@@ -2,7 +2,7 @@ import LOGO from "@/assets/img/logo/quintazur-logo.png";
 import {
   //  FaFacebook,
   //  FaLinkedinIn
-  FaPhone,
+  // FaPhone,
   FaInstagram,
 } from "react-icons/fa";
 import { NavLink } from "react-router";
@@ -42,12 +42,12 @@ export default function Footer() {
           </p>
         </NavLink> */}
         <div className="grid gap-4">
-          <div className="flex items-center gap-4 text-sm text-white">
+          {/* <div className="flex items-center gap-4 text-sm text-white">
             <a href="tel:+525558125581" target="_blank" rel="noreferrer">
               <FaPhone className="h-4 w-4 rotate-90 text-[#48A0FF]" />
             </a>
             <span>+52 (55) 5812 5581</span>
-          </div>
+          </div> */}
           <div className="flex gap-4 text-white">
             <ul className="flex gap-4">
               {socials.map((social, index) => (

@@ -64,8 +64,8 @@ export default function Navbar() {
       <div className="grid h-12 items-center justify-center bg-[#0033A1] text-white">
         <a href="tel:+525558125581" target="_blank" rel="noreferrer">
           <p>
-            Te acompañamos en cada momento:{" "}
-            <span className="text-[#48A0FF]">+52 (55) 5812 5581</span>{" "}
+            Te acompañamos en cada momento{" "}
+            {/* <span className="text-[#48A0FF]">+52 (55) 5812 5581</span>{" "} */}
           </p>
         </a>
       </div>
