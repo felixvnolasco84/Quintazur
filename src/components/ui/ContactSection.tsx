@@ -59,10 +59,10 @@ const onSubmit = async (dataValues: {
           <br />
           es saber que nunca estás solo.
         </h2>
-        <p className="mx-auto mt-2 max-w-xl text-lg text-[#6D6D6D] lg:mt-2">
+        <p className="mx-auto mt-2 max-w-xl text-lg text-[#6D6D6D] lg:mt-4">
           Próxima apertura en el último trimestre de 2025.
         </p>
-        <p className="mx-auto mt-4 max-w-xl text-lg text-[#6D6D6D] lg:mt-12">
+        <p className="mx-auto mt-4 max-w-xl text-lg text-[#6D6D6D] lg:mt-4">
           Si estás interesado en formar parte de nuestra comunidad, <br />{" "}
           déjanos tus datos y en breve nos pondremos en contacto contigo.
         </p>
