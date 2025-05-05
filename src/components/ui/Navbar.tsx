@@ -64,7 +64,7 @@ export default function Navbar() {
       <div className="grid h-16 items-center justify-center bg-[#0033A1] text-white">        
           <p className="py-2">
             Te acompañamos en cada momento{" "} <br />
-            Proxima apertura en el último trimestre de 2025.
+            Próxima apertura en el último trimestre de 2025.
             {/* <span className="text-[#48A0FF]">+52 (55) 5812 5581</span>{" "} */}
           </p>        
       </div>
