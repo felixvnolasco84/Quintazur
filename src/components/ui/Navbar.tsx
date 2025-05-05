@@ -61,7 +61,7 @@ export default function Navbar() {
 
   return (
     <div className="sticky top-0 z-40 grid">
-      <div className="grid h-12 items-center justify-center bg-[#0033A1] text-white">        
+      <div className="grid h-16 items-center justify-center bg-[#0033A1] text-white">        
           <p className="py-2">
             Te acompañamos en cada momento{" "} <br />
             Proxima apertura en el último trimestre de 2025.
