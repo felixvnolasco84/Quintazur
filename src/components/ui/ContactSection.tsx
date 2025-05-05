@@ -60,7 +60,7 @@ const onSubmit = async (dataValues: {
           es saber que nunca estás solo.
         </h2>
         <p className="mx-auto mt-2 max-w-xl text-lg text-[#6D6D6D] lg:mt-2">
-          Proxima apertura en el último trimestre de 2025.
+          Próxima apertura en el último trimestre de 2025.
         </p>
         <p className="mx-auto mt-4 max-w-xl text-lg text-[#6D6D6D] lg:mt-12">
           Si estás interesado en formar parte de nuestra comunidad, <br />{" "}
