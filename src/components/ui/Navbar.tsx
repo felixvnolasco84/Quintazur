@@ -61,13 +61,12 @@ export default function Navbar() {
 
   return (
     <div className="sticky top-0 z-40 grid">
-      <div className="grid h-12 items-center justify-center bg-[#0033A1] text-white">
-        <a href="tel:+525558125581" target="_blank" rel="noreferrer">
+      <div className="grid h-12 items-center justify-center bg-[#0033A1] text-white">        
           <p>
-            Te acompañamos en cada momento{" "}
+            Te acompañamos en cada momento{" "} <br />
+            Proxima apertura en el último trimestre de 2025.
             {/* <span className="text-[#48A0FF]">+52 (55) 5812 5581</span>{" "} */}
-          </p>
-        </a>
+          </p>        
       </div>
       <header className="bg-white px-4 py-4 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl items-center justify-between">
