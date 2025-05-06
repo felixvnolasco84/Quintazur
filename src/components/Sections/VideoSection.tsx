@@ -24,7 +24,7 @@ export default function VideoSection() {
       {/* MUX Player con estilo adaptado */}
       <div className="relative aspect-video w-full overflow-hidden md:aspect-[16/9]">
         <MuxPlayer
-          playbackId="iG5wqoPdd01qSkW5MpYYSUF7uQ6ow7fUcgNb00ZICa7g4"
+          playbackId="bxw4K8NflgsfkXb5FNHbM9MKhwJWbzMPzURT6ctkhbg"
           streamType="on-demand"
           metadata={{
             video_title: "Residencia Quintazur Tlalpan",

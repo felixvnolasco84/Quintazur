@@ -84,3 +84,8 @@
 .poppins {
   font-family: "Poppins", sans-serif;
 }
+
+mux-player {
+  --media-object-fit: cover;
+  --media-object-position: center;
+}
