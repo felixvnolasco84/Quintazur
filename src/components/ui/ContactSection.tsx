@@ -34,7 +34,7 @@ const onSubmit = async (dataValues: {
   mensaje: string;
 }) => {
   const response = await fetch(
-    "https://quintazur-mail-service.vercel.app/send-email",
+    "https://quintazur-mail-service-typescript.vercel.app/send-email",
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
