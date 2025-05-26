@@ -1,11 +1,11 @@
 // Nuevo import
 import MuxPlayer from "@mux/mux-player-react";
-import { useState } from "react";
-import { Button } from "../ui/button";
+// import { useState } from "react";
+// import { Button } from "../ui/button";
 
 export default function VideoSection() {
 
-  const [currentVideo, setCurrentVideo] = useState<boolean>(true);
+  // const [currentVideo, setCurrentVideo] = useState<boolean>(true);
 
   return (
     <section
@@ -24,14 +24,25 @@ export default function VideoSection() {
           Primera residencia en México{" "}
           <span className="font-bold">con certificado Leed.</span>
         </p>
-        <Button onClick={() => setCurrentVideo(!currentVideo)} variant={"default"} className="mt-4" size={"lg"}>
+        {/* <Button onClick={() => setCurrentVideo(!currentVideo)} variant={"default"} className="mt-4" size={"lg"}>
            {currentVideo ? "Change language to English" : "Cambiar idioma a Español"}
-        </Button>
+        </Button> */}
       </div>
 
       {/* MUX Player con estilo adaptado */}
       <div className="relative aspect-video w-full overflow-hidden md:aspect-[16/9]">
 
+
+        <MuxPlayer
+          playbackId="MCubJngarGxgv7rIXbQT422BKAlMwQyAw2wMznuww8Q"
+          streamType="on-demand"
+          metadata={{
+            video_title: "Residencia Quintazur Tlalpan",
+          }}
+          autoPlay={false}
+          className="h-full w-full object-cover"
+        />
+        {/* 
         {
           currentVideo ? (
             <MuxPlayer
@@ -54,7 +65,7 @@ export default function VideoSection() {
               className="h-full w-full object-cover"
             />
           )
-        }
+        } */}
 
       </div>
     </section>
