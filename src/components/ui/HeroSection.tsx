@@ -10,7 +10,7 @@ export default function HeroSection() {
         <div className="relative h-full w-full">
 
           <MuxPlayer
-            playbackId="S3UvARmcdjapTpayHMVKvddNtw01AjgY151WnxtqtNR00"
+            playbackId="MCubJngarGxgv7rIXbQT422BKAlMwQyAw2wMznuww8Q"
             metadata={{
               video_title: "Residencia Quintazur Tlalpan",
             }}
