@@ -1,4 +1,4 @@
-import MuxPlayer from "@mux/mux-player-react";
+// import MuxPlayer from "@mux/mux-player-react";
 import { NavLink } from "react-router";
 import { Button } from "./button";
 
@@ -9,7 +9,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <div className="relative h-full w-full">
 
-          <MuxPlayer
+          {/* <MuxPlayer
             playbackId="MCubJngarGxgv7rIXbQT422BKAlMwQyAw2wMznuww8Q"
             metadata={{
               video_title: "Residencia Quintazur Tlalpan",
@@ -18,7 +18,10 @@ export default function HeroSection() {
             autoPlay={true}
             loop={true}
             className="h-full w-full object-cover"
-          />
+          /> */}
+          <video autoPlay loop muted className="h-full w-full object-cover">
+            <source src="https://f5z6vohtd8.ufs.sh/f/9xW4M4QjXVSm3vZzKAD6jqJTMZCBARXs7LEfW8v4oUbOzKmh" type="video/mp4" />
+          </video>
           {/* Dark overlay for better text visibility */}
           <div className="absolute inset-0 bg-black/30"></div>
         </div>

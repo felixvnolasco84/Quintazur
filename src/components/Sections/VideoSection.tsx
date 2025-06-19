@@ -1,5 +1,5 @@
 // Nuevo import
-import MuxPlayer from "@mux/mux-player-react";
+// import MuxPlayer from "@mux/mux-player-react";
 // import { useState } from "react";
 // import { Button } from "../ui/button";
 
@@ -33,7 +33,7 @@ export default function VideoSection() {
       <div className="relative aspect-video w-full overflow-hidden md:aspect-[16/9]">
 
 
-        <MuxPlayer
+        {/* <MuxPlayer
           playbackId="MCubJngarGxgv7rIXbQT422BKAlMwQyAw2wMznuww8Q"
           streamType="on-demand"
           metadata={{
@@ -41,7 +41,12 @@ export default function VideoSection() {
           }}
           autoPlay={false}
           className="h-full w-full object-cover"
-        />
+        /> */}
+
+        <video controls className="h-full w-full object-cover">
+          <source src="https://f5z6vohtd8.ufs.sh/f/9xW4M4QjXVSm3vZzKAD6jqJTMZCBARXs7LEfW8v4oUbOzKmh" type="video/mp4" />
+        </video>
+
         {/* 
         {
           currentVideo ? (
