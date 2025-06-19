@@ -19,7 +19,7 @@ export default function HeroSection() {
             loop={true}
             className="h-full w-full object-cover"
           /> */}
-          <video autoPlay loop muted className="h-full w-full object-cover">
+          <video poster="https://files.edgestore.dev/evsl88oz3bs775wf/publicFiles/_public/a69e817b-b95b-476d-8669-223d0ad58931.png" autoPlay loop muted className="h-full w-full object-cover">
             <source src="https://f5z6vohtd8.ufs.sh/f/9xW4M4QjXVSm3vZzKAD6jqJTMZCBARXs7LEfW8v4oUbOzKmh" type="video/mp4" />
           </video>
           {/* Dark overlay for better text visibility */}

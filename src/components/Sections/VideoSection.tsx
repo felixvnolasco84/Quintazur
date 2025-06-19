@@ -43,7 +43,7 @@ export default function VideoSection() {
           className="h-full w-full object-cover"
         /> */}
 
-        <video controls className="h-full w-full object-cover">
+        <video  controls className="h-full w-full object-cover">
           <source src="https://f5z6vohtd8.ufs.sh/f/9xW4M4QjXVSm3vZzKAD6jqJTMZCBARXs7LEfW8v4oUbOzKmh" type="video/mp4" />
         </video>
 
