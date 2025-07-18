@@ -1,10 +1,12 @@
 import LOGO from "@/assets/img/logo/quintazur-logo.png";
+import { PhoneCall } from "lucide-react";
 import {
   //  FaFacebook,
   //  FaLinkedinIn
   // FaPhone,
   FaInstagram,
 } from "react-icons/fa";
+
 import { NavLink } from "react-router";
 
 export default function Footer() {
@@ -16,11 +18,13 @@ export default function Footer() {
     {
       icon: FaInstagram,
       link: "https://www.instagram.com/quintazur?igsh=MWJwYWcxanh6dWdx",
+      label: "@quintazur",
+    },  
+    {
+      icon: PhoneCall,
+      link: "tel:5622008895",      
+      label: "56-2200-8895",  
     },
-    // {
-    //   icon: FaLinkedinIn,
-    //   link: "#",
-    // },
   ];
 
   return (
@@ -49,22 +53,16 @@ export default function Footer() {
             <span>+52 (55) 5812 5581</span>
           </div> */}
           <div className="flex gap-4 text-white">
-            <ul className="flex gap-4">
+            <ul className="flex flex-col gap-4">
               {socials.map((social, index) => (
-                <li key={index}>
-                  <a href={social.link} target="_blank" rel="noreferrer">
+                <a href={social.link} target="_blank" rel="noreferrer">
+                  <li className="flex items-center gap-2" key={index}>
                     <social.icon className="h-6 w-6 text-[#48A0FF]" />
-                  </a>
-                </li>
+                    <span>{social.label}</span>
+                  </li>
+                </a>
               ))}
-            </ul>
-            <a
-              href="https://www.instagram.com/quintazur?igsh=MWJwYWcxanh6dWdx"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span>@quintazur</span>
-            </a>
+            </ul>          
           </div>
         </div>
 
