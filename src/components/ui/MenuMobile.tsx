@@ -72,7 +72,7 @@ export default function MenuMobile() {
               </SheetClose>
             </NavLink>
 
-            <NavigationMenuList className="flex w-full flex-col space-y-4">
+            <NavigationMenuList className="flex w-full flex-col space-y-4 items-start">
               {links.map((link) => (
                 <NavigationMenuItem className="w-full" key={link.title}>
                   <NavLink
