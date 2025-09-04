@@ -60,7 +60,7 @@ export default function Navbar() {
   return (
     <div className="sticky top-0 z-40 grid">
       <div className="grid  items-center justify-center bg-[#0033A1] text-white">        
-          <div className="py-6 text-2xl">
+          <div className="py-2 lg:py-6 text-lg lg:text-2xl">
             Próxima apertura: Enero 2026            
           </div>        
       </div>
