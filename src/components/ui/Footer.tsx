@@ -69,6 +69,7 @@ export default function Footer() {
         <div className="grid gap-4 text-left text-white underline">
           <NavLink to="/legal">Legal</NavLink>
           <NavLink to="/aviso-de-privacidad">Aviso de Privacidad</NavLink>
+          <NavLink to="/bolsa-de-trabajo">Bolsa de Trabajo</NavLink>
         </div>
       </div>
     </footer>

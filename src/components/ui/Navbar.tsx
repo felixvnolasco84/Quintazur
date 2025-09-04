@@ -8,8 +8,8 @@ import { Button } from "./button";
 import MenuMobile from "./MenuMobile";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-
 import Logo from '@/assets/img/logo/Nuevo_Logo_Quintazur_Azul.png'
+import { ChevronDown } from "lucide-react";
 
 export default function Navbar() {
   const location = useLocation();
@@ -59,14 +59,12 @@ export default function Navbar() {
 
   return (
     <div className="sticky top-0 z-40 grid">
-      <div className="grid h-16 items-center justify-center bg-[#0033A1] text-white">        
-          <p className="py-2">
-            Te acompañamos en cada momento. <br />
-            Próxima apertura en enero 2026.
-            {/* <span className="text-[#48A0FF]">+52 (55) 5812 5581</span>{" "} */}
-          </p>        
+      <div className="grid  items-center justify-center bg-[#0033A1] text-white">        
+          <div className="py-6 text-2xl">
+            Próxima apertura: Enero 2026            
+          </div>        
       </div>
-      <header className="bg-white px-4 py-4 sm:px-6 lg:px-8">
+      <header className="bg-white px-4 py-4 sm:px-6 lg:px-8 shadow-lg">
         <div className="mx-auto flex max-w-7xl items-center justify-between">
           <NavLink onClick={() => scrollToSection("inicio")} to="/">
             <img src={Logo} className="h-20 w-auto" alt="Logo" />
@@ -78,6 +76,7 @@ export default function Navbar() {
                   <NavLink
                     onClick={() => scrollToSection(link.id)}
                     to={link.href}
+                    className={"flex items-center"}
                   >
                     <Button
                       className="text-base font-normal"
@@ -86,9 +85,12 @@ export default function Navbar() {
                     >
                       {link.title}
                     </Button>
+
+                    <ChevronDown className="h-4 w-4 text-[#0033a1]" />
                   </NavLink>
                 </NavigationMenuItem>
               ))}
+
             </NavigationMenuList>
 
             {/* <div>

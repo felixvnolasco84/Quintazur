@@ -24,9 +24,9 @@ export default function AmenitiesSection() {
               {/* Columna izquierda - Título y descripción */}
               <div className="flex w-full flex-col items-start justify-start lg:w-1/2">
                 <h2 className="mb-6 w-full text-center text-3xl font-light md:text-4xl lg:mb-12 lg:text-left lg:text-5xl lg:leading-[60px]">
-                  Amenidades diseñadas
+                  Espacios diseñados
                   <span className="noto-serif-display block font-light italic">
-                    para tu bienestar.
+                    para ti.
                   </span>
                 </h2>
                 <NavLink to="/#contacto" className="w-full">
@@ -36,11 +36,14 @@ export default function AmenitiesSection() {
                 </NavLink>
               </div>
               <div className="mt-8 lg:mt-4">
-                <p className="max-w-lg text-left text-lg font-light text-white lg:text-2xl lg:leading-[40px]">
+                {/* <p className="max-w-lg text-left text-lg font-light text-white lg:text-2xl lg:leading-[40px]">
                   Desde un restaurante bistró y espacios para la vida social,
                   hasta una tarde en el jardín con tu familia, cada amenidad ha
                   sido cuidadosamente diseñada para ofrecerte confort,
-                  exclusividad y armonía con el entorno.
+                  exclusividad y armonía con el entorno.</p> */}
+                <p className="max-w-lg text-left text-lg font-light text-white lg:text-2xl lg:leading-[40px]">
+                Disfruta de las amenidades: biblioteca, capilla,
+                salón de belleza, carril de nado, gimnasio, cine, salones y más.
                 </p>
               </div>
             </div>
@@ -77,12 +80,13 @@ export default function AmenitiesSection() {
                       Vida social
                     </AccordionTrigger>
                     <AccordionContent className="pb-6 text-left text-lg text-white">
-                      Nunca es tarde para seguir conociendo a otras personas /
-                      ven y arma tu mesa de juego
+                    Disfruta de una vida social activa, rodeado de personas afines para compartir
+                    recuerdos, intereses, experiencias y nuevas formas de disfrutar el presente.
                     </AccordionContent>
                   </AccordionItem>
 
-                  <AccordionItem
+                  {/* Room Service 
+                              <AccordionItem
                     value="item-3"
                     className="border-t border-[#F8FCEF]"
                   >
@@ -94,16 +98,20 @@ export default function AmenitiesSection() {
                     </AccordionContent>
                   </AccordionItem>
 
+
+                  */}
+
+      
                   <AccordionItem
                     value="item-4"
                     className="border-t border-[#F8FCEF]"
                   >
                     <AccordionTrigger className="py-6 text-xl font-light lg:text-3xl">
-                      Punto de reunión familiar
+                      Reunión familiar
                     </AccordionTrigger>
                     <AccordionContent className="pb-6 text-left text-lg text-white">
-                      Invita a tu familia a comer y disfruta de nuestros
-                      jardines
+                    Es tu casa: invita a tu familia y amigos a comer, disfrutar del jardín y de otros
+                    espacios. Lo único importante es pasar juntos momentos inolvidables.
                     </AccordionContent>
                   </AccordionItem>
 
@@ -115,8 +123,10 @@ export default function AmenitiesSection() {
                       Programas y actividades
                     </AccordionTrigger>
                     <AccordionContent className="pb-6 text-left text-lg text-white">
-                      Participa en el huerto, gym, cine, excursiones y más que
-                      tenemos para ti.
+                    Desde el huerto hasta el gimnasio, el cine y las excursiones, cada
+                    experiencia está pensada en ti. Nuestros programas Cognitive y Alive fueron
+diseñados para mantener tu mente activa, tu cuerpo en movimiento y tu vida
+con propósito.
                     </AccordionContent>
                   </AccordionItem>
 
@@ -125,11 +135,13 @@ export default function AmenitiesSection() {
                     className="border-b border-t border-b-[#F8FCEF] border-t-[#F8FCEF]"
                   >
                     <AccordionTrigger className="py-6 text-xl font-light lg:text-3xl">
-                      Modelo de cuidado validado
+                      Modelo de cuidado
                     </AccordionTrigger>
                     <AccordionContent className="pb-6 text-left text-lg text-white">
-                      Nuestra atención es personalizada en manos de
-                      profesionales para garantizar tu calidad de vida
+                    Atención personalizada en manos de profesionales para promover tu calidad
+de vida. Validado por estándares internacionales que respaldan nuestra
+excelencia, porque lo más importante para nosotros eres tú.
+“Descubre la diferencia de un cuidado hecho para ti”
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem
@@ -140,8 +152,9 @@ export default function AmenitiesSection() {
                       Pet friendly
                     </AccordionTrigger>
                     <AccordionContent className="pb-6 text-left text-lg text-white">
-                      Aquí, tu mascota es parte de la familia: ven a vivir esta
-                      nueva etapa juntos
+                    Tu mascota siempre estará contigo: Sabemos lo valiosa que es en tu vida,
+por eso también cuidamos de su bienestar y contamos con espacios
+diseñados para ella.
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem
@@ -162,7 +175,8 @@ export default function AmenitiesSection() {
                     <AccordionTrigger className="py-6 text-xl font-light lg:text-3xl">
                       Club de día
                     </AccordionTrigger>
-                    <AccordionContent className="pb-6 text-left text-lg text-white"></AccordionContent>
+                    <AccordionContent className="pb-6 text-left text-lg text-white">Para personas que viven en su casa pero desean mantenerse activos y
+                    conectar con nuevas personas.</AccordionContent>
                   </AccordionItem>
                 </Accordion>
               </div>

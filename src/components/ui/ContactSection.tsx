@@ -22,8 +22,9 @@ const ContactSection = () => {
       telefono: "",
       residencia: "para_mis_papas", // Opción por defecto
       mensaje: "",
+      como_nos_conociste: "otro", // Opción por defecto
     },
-  });
+  });  
   
 const onSubmit = async (dataValues: {
   nombre: string;
@@ -32,6 +33,7 @@ const onSubmit = async (dataValues: {
   telefono: string;
   residencia: string;
   mensaje: string;
+  como_nos_conociste: string;
 }) => {
   const response = await fetch(
     "https://quintazur-mail-service-typescript.vercel.app/send-email",
@@ -76,7 +78,7 @@ const onSubmit = async (dataValues: {
             className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2"
           >
             {/* Columna izquierda */}
-            <div className="space-y-6 text-left">
+            <div className="space-y-6 text-left p-4 border rounded-lg border-gray-300">
               {/* Nombre */}
               <FormField
                 control={form.control}
@@ -225,6 +227,107 @@ const onSubmit = async (dataValues: {
                 />
               </div>
 
+              <div className="space-y-6 text-left ">
+              {/* Como nos conociste */}
+              <div>
+                <h4 className="poppins mb-4 text-sm font-semibold uppercase tracking-wider text-[#6D6D6D]">
+                  Como nos conociste?
+                </h4>
+                <FormField
+                  control={form.control}
+                  name="como_nos_conociste"
+                  render={({ field }) => (
+                    <FormItem className="space-y-3">
+                      <FormControl>
+                        <RadioGroup
+                          onValueChange={field.onChange}
+                          defaultValue={field.value}
+                          className=" grid grid-cols-2 md:grid-cols-3 gap-4"
+                        >
+                          <FormItem className="flex items-center space-x-3 space-y-0">
+                            <FormControl>
+                              <RadioGroupItem
+                                value="recomendacion"
+                                id="recomendacion"
+                                className="h-6 w-6 border border-[#C6C6C6] text-blue-800"
+                              />
+                            </FormControl>
+                            <Label htmlFor="recomendacion" className="font-normal">
+                              Recomendación de un familiar
+                            </Label>
+                          </FormItem>
+
+                          <FormItem className="flex items-center space-x-3 space-y-0">
+                            <FormControl>
+                              <RadioGroupItem
+                                value="folleto"
+                                id="folleto"
+                                className="h-6 w-6 border border-[#C6C6C6] text-blue-800"
+                              />
+                            </FormControl>
+                            <Label htmlFor="folleto" className="font-normal">
+                              Folleto
+                            </Label>
+                          </FormItem>
+                          <FormItem className="flex items-center space-x-3 space-y-0">
+                            <FormControl>
+                              <RadioGroupItem
+                                value="pagina_web"
+                                id="pagina_web"
+                                className="h-6 w-6 border border-[#C6C6C6] text-blue-800"
+                              />
+                            </FormControl>
+                            <Label htmlFor="pagina_web" className="font-normal">
+                              Página web
+                            </Label>
+                          </FormItem>
+                          <FormItem className="flex items-center space-x-3 space-y-0">
+                            <FormControl>
+                              <RadioGroupItem
+                                value="recomendacion_doctor"
+                                id="recomendacion_doctor"
+                                className="h-6 w-6 border border-[#C6C6C6] text-blue-800"
+                              />
+                            </FormControl>
+                            <Label htmlFor="recomendacion_doctor" className="font-normal">
+                              Recomendación de un doctor
+                            </Label>
+                          </FormItem>
+                          <FormItem className="flex items-center space-x-3 space-y-0">
+                            <FormControl>
+                              <RadioGroupItem
+                                value="redes_sociales"
+                                id="redes_sociales"
+                                className="h-6 w-6 border border-[#C6C6C6] text-blue-800"
+                              />
+                            </FormControl>
+                            <Label htmlFor="redes_sociales" className="font-normal">
+                              Redes sociales
+                            </Label>
+                          </FormItem>
+                          <FormItem className="flex items-center space-x-3 space-y-0">
+                            <FormControl>
+                              <RadioGroupItem
+                                value="otro"
+                                id="otro"
+                                className="h-6 w-6 border border-[#C6C6C6] text-blue-800"
+                              />
+                            </FormControl>
+                            <Label
+                              htmlFor="otro"
+                              className="font-normal"
+                            >
+                              Otro
+                            </Label>
+                          </FormItem>
+                        </RadioGroup>
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+            </div>
               {/* Mensaje */}
               <FormField
                 control={form.control}
@@ -245,7 +348,10 @@ const onSubmit = async (dataValues: {
                   </FormItem>
                 )}
               />
-            </div>
+
+
+
+              </div>
 
             {/* Botón Enviar - Span en ambas columnas en móvil */}
             <div className="mt-4 flex justify-center md:col-span-2">

@@ -13,6 +13,7 @@ import { MdMenu } from "react-icons/md";
 import { NavLink } from "react-router";
 import { Button } from "./button";
 import { NavigationMenuItem, NavigationMenuList } from "./navigation-menu";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function MenuMobile() {
   const scrollToSection = (id: string) => {
@@ -82,6 +83,13 @@ export default function MenuMobile() {
                   </NavLink>
                 </NavigationMenuItem>
               ))}
+              <NavigationMenuItem>
+                <NavLink target="_blank" to={"https://wa.me/5622008895"}>
+                  <SheetClose>
+                    <FaWhatsapp className="h-6 w-6" />
+                  </SheetClose>
+                </NavLink>
+              </NavigationMenuItem>
             </NavigationMenuList>
           </ul>
         </nav>
