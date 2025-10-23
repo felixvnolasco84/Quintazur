@@ -1,9 +1,7 @@
-import { NavLink, Outlet } from "react-router";
+import { Outlet } from "react-router";
 import Navbar from "./ui/Navbar";
 import Footer from "./ui/Footer";
 import { ModalProvider } from "./providers/modal-provider";
-import { Button } from "./ui/button";
-import { FaWhatsapp } from "react-icons/fa";
  
 
 function WebsiteLayout() {
@@ -12,7 +10,7 @@ function WebsiteLayout() {
       <Navbar />
       <Outlet />
       <ModalProvider />
-      <div className="fixed bottom-0 right-0 p-4">          
+      {/* <div className="fixed bottom-0 right-0 p-4">          
         <NavLink to={"https://wa.me/5622008895"} target="_blank">
           <Button
             variant={"ghost"}
@@ -23,7 +21,7 @@ function WebsiteLayout() {
           <FaWhatsapp className="h-6 w-6" />
         </Button>
         </NavLink>
-      </div>
+      </div> */}
       <Footer />
     </div>
   );

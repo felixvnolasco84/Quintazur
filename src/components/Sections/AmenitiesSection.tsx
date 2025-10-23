@@ -5,10 +5,35 @@ import {
   AccordionTrigger,
 } from "../ui/accordion";
 import AmenitiesImage from "@/assets/img/bg/AmenitiesImage.png";
+import ModeloCuidadoImage from "@/assets/img/bg/Modelo-Cuidado.jpg";
+import PetFriendlyImage from "@/assets/img/bg/Pet-Friendly.jpg";
+import ProgramasActImage from "@/assets/img/bg/Programas-y-Act.jpg";
+import ReuniomFamImage from "@/assets/img/bg/Reuniom-Fam.jpg";
+import VidaSocialImage from "@/assets/img/bg/Vida-Social.jpg";
 import { Button } from "../ui/button";
 import { NavLink } from "react-router";
+import { useState } from "react";
 
 export default function AmenitiesSection() {
+  
+  const [currentImage, setCurrentImage] = useState<number>(0)
+
+
+  const images = [
+    AmenitiesImage,
+    VidaSocialImage,
+    ReuniomFamImage,
+    ProgramasActImage,
+    ModeloCuidadoImage,
+    PetFriendlyImage,
+    VidaSocialImage,
+    VidaSocialImage,
+  ]
+
+  const handleImageChange = (index: number) => {
+    setCurrentImage(index)
+  }
+  
   return (
     <section
       id="experiencia"
@@ -53,7 +78,7 @@ export default function AmenitiesSection() {
             {/* Imagen en móvil (visible solo en dispositivos pequeños) */}
             <div className="block w-full lg:w-1/2">
               <img
-                src={AmenitiesImage}
+                src={images[currentImage]}
                 alt="Interior con amenidades de lujo"
                 className="h-full w-full rounded-3xl object-cover object-center"
               />
@@ -63,7 +88,7 @@ export default function AmenitiesSection() {
               {/* Accordion */}
               <div>
                 <Accordion type="single" collapsible className="w-full">
-                  <AccordionItem value="item-1">
+                  <AccordionItem onClick={() => handleImageChange(0)} value="item-1">
                     <AccordionTrigger className="flex justify-between py-6 text-xl font-light text-[#F8FCEF] lg:text-3xl">
                       Restaurante y Bistró Gourmet
                     </AccordionTrigger>
@@ -73,6 +98,7 @@ export default function AmenitiesSection() {
                   </AccordionItem>
 
                   <AccordionItem
+                    onClick={() => handleImageChange(1)}
                     value="item-2"
                     className="border-t border-[#F8FCEF]"
                   >
@@ -103,6 +129,7 @@ export default function AmenitiesSection() {
 
       
                   <AccordionItem
+                    onClick={() => handleImageChange(2)}
                     value="item-4"
                     className="border-t border-[#F8FCEF]"
                   >
@@ -116,6 +143,7 @@ export default function AmenitiesSection() {
                   </AccordionItem>
 
                   <AccordionItem
+                    onClick={() => handleImageChange(3)}
                     value="item-5"
                     className="border-t border-[#F8FCEF]"
                   >
@@ -131,6 +159,7 @@ con propósito.
                   </AccordionItem>
 
                   <AccordionItem
+                    onClick={() => handleImageChange(4)}
                     value="item-6"
                     className="border-b border-t border-b-[#F8FCEF] border-t-[#F8FCEF]"
                   >
@@ -145,6 +174,7 @@ excelencia, porque lo más importante para nosotros eres tú.
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem
+                    onClick={() => handleImageChange(5)}
                     value="item-7"
                     className="border-b border-t border-b-[#F8FCEF] border-t-[#F8FCEF]"
                   >
@@ -158,6 +188,7 @@ diseñados para ella.
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem
+                    onClick={() => handleImageChange(6)}
                     value="item-8"
                     className="border-b border-t border-b-[#F8FCEF] border-t-[#F8FCEF]"
                   >
@@ -169,6 +200,7 @@ diseñados para ella.
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem
+                    onClick={() => handleImageChange(7)}
                     value="item-9"
                     className="border-b border-t border-b-[#F8FCEF] border-t-[#F8FCEF]"
                   >

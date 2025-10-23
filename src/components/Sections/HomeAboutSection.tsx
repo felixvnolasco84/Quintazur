@@ -1,6 +1,7 @@
 import HandHeroImage from "@/assets/img/bg/HandHeroImage.png";
 import { NavLink } from "react-router";
 import { Button } from "../ui/button";
+import AboutUsImage from '@/assets/img/slider/Imagen2-Seccion-Nosotros.jpg'
 
 export default function HomeAboutSection() {
   return (
@@ -55,8 +56,10 @@ export default function HomeAboutSection() {
           </p>
         </div>
       </div>
-      <div className="grid items-center justify-center gap-4 lg:gap-8">
-        <p className="max-w-3xl text-left text-lg font-normal text-[#6D6D6D] lg:text-center lg:text-2xl lg:leading-[40px]">
+      <div className="flex flex-row items-center justify-center gap-4 lg:gap-8">
+        
+        <div className="w-1/2 grid grid-cols-1 gap-6 items-start">
+        <p className="max-w-3xl text-left text-lg font-normal text-[#6D6D6D] lg:text-2xl lg:leading-[40px]">
           Nos comprometemos a ofrecer un cuidado integral y profesional,
           poniendo a cada residente en el centro de nuestras decisiones.
           Promovemos la dignidad, la autonomía y el respeto, asegurándonos de
@@ -69,6 +72,8 @@ export default function HomeAboutSection() {
             Quiero saber más
           </Button>
         </NavLink>
+        </div>
+        <img src={AboutUsImage} alt="" className="w-1/2 rounded-2xl object-cover object-center" />
       </div>
     </section>
   );

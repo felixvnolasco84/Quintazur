@@ -3,14 +3,11 @@ import {
   AchievementsSectionInterface,
 } from "./interfaces";
 
-
-
-
-
 import Independiente from "@/assets/img/slider/Independiente.png";
 import vidaAsistida from "@/assets/img/slider/vidaAsistida.png";
 import Altadependencia from "@/assets/img/slider/Altadependencia.png"; 
 import Memorycare from "@/assets/img/slider/memory.png"; 
+
 
 export const achievementsSection: AchievementsSectionInterface = {
   title: "Cuidarte con respeto es acompañarte en tu independencia.",

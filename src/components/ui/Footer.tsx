@@ -54,9 +54,9 @@ export default function Footer() {
           </div> */}
           <div className="flex gap-4 text-white">
             <ul className="flex flex-col gap-4">
-              {socials.map((social, index) => (
-                <a href={social.link} target="_blank" rel="noreferrer">
-                  <li className="flex items-center gap-2" key={index}>
+              {socials.map((social) => (
+                <a key={social.label} href={social.link} target="_blank" rel="noreferrer">
+                  <li className="flex items-center gap-2">
                     <social.icon className="h-6 w-6 text-[#48A0FF]" />
                     <span>{social.label}</span>
                   </li>

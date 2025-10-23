@@ -12,6 +12,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useForm } from "react-hook-form";
+import { NavLink } from "react-router";
 
 const ContactSection = () => {
   const form = useForm({
@@ -66,7 +67,10 @@ const onSubmit = async (dataValues: {
         </p>
         <p className="mx-auto mt-4 max-w-xl text-lg text-[#6D6D6D] lg:mt-4">
           Si estás interesado en formar parte de nuestra comunidad, <br />{" "}
-          déjanos tus datos y en breve nos pondremos en contacto contigo.
+          <NavLink to="/bolsa-de-trabajo" className="font-semibold text-blue-800 underline">
+          déjanos tus datos
+          </NavLink>
+          {" "}y en breve nos pondremos en contacto contigo.
         </p>
       </div>
 
@@ -231,7 +235,7 @@ const onSubmit = async (dataValues: {
               {/* Como nos conociste */}
               <div>
                 <h4 className="poppins mb-4 text-sm font-semibold uppercase tracking-wider text-[#6D6D6D]">
-                  Como nos conociste?
+                  ¿Como nos conociste?
                 </h4>
                 <FormField
                   control={form.control}
