@@ -30,6 +30,17 @@ const BolsaTrabajoContactSection = () => {
     },
   });  
   
+  // Watch all form values
+  const formValues = form.watch();
+  
+  // Check if form is valid for submission
+  const isFormInvalid = 
+    !formValues.nombre ||
+    !formValues.apellidos ||
+    !formValues.email ||
+    !formValues.telefono ||
+    !formValues.curriculum_vitae;
+  
 const onSubmit = async (dataValues: {
   nombre: string;
   apellidos: string;
@@ -218,14 +229,14 @@ const onSubmit = async (dataValues: {
                       Curriculum Vitae
                     </FormLabel>
                     <FormDescription>
-                      Solo se aceptan archivos PDF, DOC y DOCX. Tamaño máximo 5MB.
+                      Solo se aceptan archivos PDF, DOC y DOCX. Tamaño máximo 5MB. <br /> Es necesario adjuntar un curriculum vitae para enviar el formulario.
                     </FormDescription>
                     <FormControl className="cursor-pointer">
                       <Input                        
                         type="file"
                         accept=".pdf,.doc,.docx"
                         onChange={(e) => onChange(e.target.files?.[0] || null)}
-                        className="cursor-pointer file:cursor-pointer file:border-0 file:bg-blue-800 file:text-white file:hover:bg-blue-900 file:rounded-sm h-fit py-4"
+                        className="cursor-pointer file:cursor-pointer file:border-0 file:bg-blue-800 file:text-white file:hover:bg-blue-900 file:rounded-sm h-fit py-4 focus-within:bg-black autofill:bg-black"
                         name={field.name}
                         onBlur={field.onBlur}
                         ref={field.ref}
@@ -242,7 +253,8 @@ const onSubmit = async (dataValues: {
             <div className="mt-4 flex justify-center md:col-span-2">
               <Button
                 type="submit"
-                className="w-full rounded-full bg-blue-800 px-12 py-3 text-sm font-medium uppercase tracking-wider text-white transition-colors duration-300 hover:bg-blue-900 lg:w-fit"
+                disabled={isFormInvalid}
+                className="w-full rounded-full bg-blue-800 px-12 py-3 text-sm font-medium uppercase tracking-wider text-white transition-colors duration-300 hover:bg-blue-900 lg:w-fit disabled:cursor-not-allowed disabled:opacity-50"
               >
                 Enviar
               </Button>
