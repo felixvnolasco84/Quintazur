@@ -64,7 +64,7 @@ export default function Navbar() {
         
         <div className="grid grid-cols-2 items-center text-white max-w-7xl mx-auto">
           <p className="text-base lg:text-2xl italic font-semibold text-left">
-            Próxima apertura: <br /> Marzo 2026
+            Próxima apertura: <br /> Abril 2026
           </p>        
           {/* Whatsapp button */}
           <NavLink to="https://wa.me/5622008895" target="_blank" className={"text-right"}>
