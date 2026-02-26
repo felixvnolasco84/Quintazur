@@ -2,7 +2,8 @@ import { Outlet } from "react-router";
 import Navbar from "./ui/Navbar";
 import Footer from "./ui/Footer";
 import { ModalProvider } from "./providers/modal-provider";
- 
+import { Toaster } from "@/components/ui/sonner"
+
 
 function WebsiteLayout() {
   return (
@@ -23,6 +24,7 @@ function WebsiteLayout() {
         </NavLink>
       </div> */}
       <Footer />
+      <Toaster />
     </div>
   );
 }

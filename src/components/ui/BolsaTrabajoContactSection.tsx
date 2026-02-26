@@ -17,60 +17,73 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { toast } from "sonner";
+
+const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
+const ACCEPTED_FILE_TYPES = [
+  "application/pdf",
+  "application/msword",
+  "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+];
+
+const bolsaTrabajoFormSchema = z.object({
+  nombre: z.string().min(1, "El nombre es requerido"),
+  apellidos: z.string().min(1, "Los apellidos son requeridos"),
+  email: z.string().min(1, "El correo electrónico es requerido").email("Correo electrónico inválido"),
+  telefono: z.string().min(1, "El teléfono es requerido").min(10, "El teléfono debe tener al menos 10 dígitos"),
+  departamento_de_aplicacion: z.string().min(1, "Selecciona un departamento"),
+  curriculum_vitae: z
+    .instanceof(File, { message: "El curriculum vitae es requerido" })
+    .refine((file) => file.size <= MAX_FILE_SIZE, "El archivo debe ser menor a 5MB")
+    .refine((file) => ACCEPTED_FILE_TYPES.includes(file.type), "Solo se aceptan archivos PDF, DOC y DOCX"),
+});
+
+type BolsaTrabajoFormValues = z.infer<typeof bolsaTrabajoFormSchema>;
 
 const BolsaTrabajoContactSection = () => {
-  const form = useForm({
+  const form = useForm<BolsaTrabajoFormValues>({
+    resolver: zodResolver(bolsaTrabajoFormSchema),
     defaultValues: {
       nombre: "",
       apellidos: "",
       email: "",
       telefono: "",
       departamento_de_aplicacion: "administracion", // Opción por defecto
-      curriculum_vitae: null,
+      curriculum_vitae: undefined,
     },
-  });  
-  
-  // Watch all form values
-  const formValues = form.watch();
-  
-  // Check if form is valid for submission
-  const isFormInvalid = 
-    !formValues.nombre ||
-    !formValues.apellidos ||
-    !formValues.email ||
-    !formValues.telefono ||
-    !formValues.curriculum_vitae;
-  
-const onSubmit = async (dataValues: {
-  nombre: string;
-  apellidos: string;
-  email: string;
-  telefono: string;
-  departamento_de_aplicacion: string;
-  curriculum_vitae: File | null;
-}) => {
-  const formData = new FormData();
-  formData.append('nombre', dataValues.nombre);
-  formData.append('apellidos', dataValues.apellidos);
-  formData.append('email', dataValues.email);
-  formData.append('telefono', dataValues.telefono);
-  formData.append('departamento_de_aplicacion', dataValues.departamento_de_aplicacion);
-  if (dataValues.curriculum_vitae) {
-    formData.append('curriculum_vitae', dataValues.curriculum_vitae);
-  }
+  });
 
-  const response = await fetch(
-    "https://quintazur-mail-service-typescript.vercel.app/send-bolsa-de-trabajo",
-    {
-      method: "POST",
-      body: formData,
+  const onSubmit = async (dataValues: BolsaTrabajoFormValues) => {
+    try {
+      const formData = new FormData();
+      formData.append('nombre', dataValues.nombre);
+      formData.append('apellidos', dataValues.apellidos);
+      formData.append('email', dataValues.email);
+      formData.append('telefono', dataValues.telefono);
+      formData.append('departamento_de_aplicacion', dataValues.departamento_de_aplicacion);
+      formData.append('curriculum_vitae', dataValues.curriculum_vitae);
+
+      const response = await fetch(
+        "https://quintazur-mail-service-typescript.vercel.app/send-bolsa-de-trabajo",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+      const data = await response.json();
+      if (response.ok) {
+        toast.success(data.message || "Solicitud enviada correctamente");
+        form.reset();
+      } else {
+        toast.error(data.message || "Error al enviar la solicitud");
+      }
+    } catch {
+      toast.error("Error de conexión. Inténtalo de nuevo más tarde.");
     }
-  );
-  console.log(response);
-  const data = await response.json();
-  console.log(data);
-  alert(data.message);
-};
+  };
+
   return (
     <section
       id="contacto"
@@ -79,7 +92,7 @@ const onSubmit = async (dataValues: {
       {/* Encabezado y Título */}
       <div className="mb-12 text-center md:mb-16">
         <h2 className="mb-4 text-3xl font-light text-blue-800 md:text-4xl lg:text-6xl">
-        Bolsa de Trabajo
+          Bolsa de Trabajo
         </h2>
         <p className="mx-auto mt-2 max-w-xl text-lg text-[#6D6D6D] lg:mt-4">
           Déjanos tus datos y en breve nos pondremos en contacto contigo.
@@ -185,7 +198,7 @@ const onSubmit = async (dataValues: {
                 <h4 className="poppins mb-4 text-sm font-semibold uppercase tracking-wider text-[#6D6D6D]">
                   Departamento de Aplicación
                 </h4>
-                
+
                 <FormField
                   control={form.control}
                   name="departamento_de_aplicacion"
@@ -216,14 +229,14 @@ const onSubmit = async (dataValues: {
                     </FormItem>
                   )}
                 />
-  
+
               </div>
 
               {/* Curriculum Vitae */}
               <FormField
                 control={form.control}
                 name="curriculum_vitae"
-                render={({ field: {  onChange, ...field } }) => (
+                render={({ field: { onChange, ...field } }) => (
                   <FormItem>
                     <FormLabel className="poppins text-sm font-semibold uppercase tracking-wider text-[#6D6D6D]">
                       Curriculum Vitae
@@ -232,7 +245,7 @@ const onSubmit = async (dataValues: {
                       Solo se aceptan archivos PDF, DOC y DOCX. Tamaño máximo 5MB. <br /> Es necesario adjuntar un curriculum vitae para enviar el formulario.
                     </FormDescription>
                     <FormControl className="cursor-pointer">
-                      <Input                        
+                      <Input
                         type="file"
                         accept=".pdf,.doc,.docx"
                         onChange={(e) => onChange(e.target.files?.[0] || null)}
@@ -241,7 +254,7 @@ const onSubmit = async (dataValues: {
                         onBlur={field.onBlur}
                         ref={field.ref}
                       />
-                      
+
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -253,7 +266,6 @@ const onSubmit = async (dataValues: {
             <div className="mt-4 flex justify-center md:col-span-2">
               <Button
                 type="submit"
-                disabled={isFormInvalid}
                 className="w-full rounded-full bg-blue-800 px-12 py-3 text-sm font-medium uppercase tracking-wider text-white transition-colors duration-300 hover:bg-blue-900 lg:w-fit disabled:cursor-not-allowed disabled:opacity-50"
               >
                 Enviar

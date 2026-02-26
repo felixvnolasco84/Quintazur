@@ -12,10 +12,26 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { toast } from "sonner";
 import { NavLink } from "react-router";
 
+const contactFormSchema = z.object({
+  nombre: z.string().min(1, "El nombre es requerido"),
+  apellidos: z.string().min(1, "Los apellidos son requeridos"),
+  email: z.string().min(1, "El correo electrónico es requerido").email("Correo electrónico inválido"),
+  telefono: z.string().min(1, "El teléfono es requerido").min(10, "El teléfono debe tener al menos 10 dígitos"),
+  residencia: z.string().min(1, "Selecciona una opción de residencia"),
+  mensaje: z.string().min(1, "El mensaje es requerido"),
+  como_nos_conociste: z.string().min(1, "Selecciona una opción"),
+});
+
+type ContactFormValues = z.infer<typeof contactFormSchema>;
+
 const ContactSection = () => {
-  const form = useForm({
+  const form = useForm<ContactFormValues>({
+    resolver: zodResolver(contactFormSchema),
     defaultValues: {
       nombre: "",
       apellidos: "",
@@ -27,25 +43,26 @@ const ContactSection = () => {
     },
   });  
   
-const onSubmit = async (dataValues: {
-  nombre: string;
-  apellidos: string;
-  email: string;
-  telefono: string;
-  residencia: string;
-  mensaje: string;
-  como_nos_conociste: string;
-}) => {
-  const response = await fetch(
-    "https://quintazur-mail-service-typescript.vercel.app/send-email",
-    {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(dataValues),
+const onSubmit = async (dataValues: ContactFormValues) => {
+  try {
+    const response = await fetch(
+      "https://quintazur-mail-service-typescript.vercel.app/send-email",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(dataValues),
+      }
+    );
+    const data = await response.json();
+    if (response.ok) {
+      toast.success(data.message || "Mensaje enviado correctamente");
+      form.reset();
+    } else {
+      toast.error(data.message || "Error al enviar el mensaje");
     }
-  );
-  const data = await response.json();
-  alert(data.message);
+  } catch {
+    toast.error("Error de conexión. Inténtalo de nuevo más tarde.");
+  }
 };
   return (
     <section
