@@ -24,6 +24,7 @@ createRoot(document.getElementById("root")!).render(
             <Route path="/bolsa-de-trabajo" element={<BolsaDeTrabajo />} />
             <Route path="/legal" element={<Legales />} />
             <Route path="/aviso-de-privacidad" element={<AvisoPrivacidad />} />
+            <Route path="/contacto" element={<AvisoPrivacidad />} />
           </Route>
         </Routes>
       </BrowserRouter>
