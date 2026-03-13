@@ -16,6 +16,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "sonner";
 import { NavLink } from "react-router";
+import { useEffect, useRef } from "react";
 
 const contactFormSchema = z.object({
   nombre: z.string().min(1, "El nombre es requerido"),
@@ -30,6 +31,7 @@ const contactFormSchema = z.object({
 type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 const ContactSection = () => {
+  
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -385,7 +387,7 @@ const onSubmit = async (dataValues: ContactFormValues) => {
             </div>
           </form>
         </Form>
-      </div>
+      </div>      
     </section>
   );
 };

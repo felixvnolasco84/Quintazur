@@ -6,10 +6,11 @@ import {
   // epiEquiposcompanySchema
 } from "./utils/data";
 import "./App.css";
-// import StructuredData from "./components/StructuredData";
 import VideoSection from "./components/Sections/VideoSection";
 import AmenitiesSection from "./components/Sections/AmenitiesSection";
 import ContactSection from "./components/ui/ContactSection";
+// import ContactSectionHubspot from "./components/ui/ContactSectionHubspot";
+// import StructuredData from "./components/StructuredData";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <VideoSection />
       <AmenitiesSection />
       <ContactSection />
+      {/* <ContactSectionHubspot /> */}
       {/* <StructuredData data={epiEquiposcompanySchema} /> */}
     </main>
   );
