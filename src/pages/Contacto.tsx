@@ -1,7 +1,9 @@
+import ContactSectionHubspot from "../components/ui/ContactSectionHubspot";
+
 export default function Contacto() {
   return (
     <div>
-      <h1>Contacto</h1>
+      <ContactSectionHubspot />
     </div>
   );
 }
