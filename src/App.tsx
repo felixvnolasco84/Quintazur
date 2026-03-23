@@ -8,8 +8,8 @@ import {
 import "./App.css";
 import VideoSection from "./components/Sections/VideoSection";
 import AmenitiesSection from "./components/Sections/AmenitiesSection";
-import ContactSection from "./components/ui/ContactSection";
-// import ContactSectionHubspot from "./components/ui/ContactSectionHubspot";
+// import ContactSection from "./components/ui/ContactSection";
+import ContactSectionHubspot from "./components/ui/ContactSectionHubspot";
 // import StructuredData from "./components/StructuredData";
 
 function App() {
@@ -20,8 +20,8 @@ function App() {
       <AchievmentsSection archievementsSection={achievementsSection} />
       <VideoSection />
       <AmenitiesSection />
-      <ContactSection />
-      {/* <ContactSectionHubspot /> */}
+      {/* <ContactSection /> */}
+      <ContactSectionHubspot />
       {/* <StructuredData data={epiEquiposcompanySchema} /> */}
     </main>
   );
