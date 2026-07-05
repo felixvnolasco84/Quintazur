@@ -14,7 +14,7 @@ import ContactSectionHubspot from "./components/ui/ContactSectionHubspot";
 
 function App() {
   return (
-    <main className="grid gap-0 lg:gap-36">
+    <main className="grid gap-0 lg:gap-16">
       <HeroSection />
       <HomeAboutSection />
       <AchievmentsSection archievementsSection={achievementsSection} />

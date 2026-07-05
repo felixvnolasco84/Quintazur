@@ -7,7 +7,7 @@ export default function HomeAboutSection() {
   return (
     <section
       id="nosotros"
-      className="mx-auto grid w-full max-w-7xl gap-6 px-4 py-16 md:px-12 md:py-24 lg:gap-36" 
+      className="mx-auto grid w-full max-w-7xl gap-6 px-4 py-16 md:px-12 md:py-24 lg:gap-36"
     >
       <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-16">
         {/* Imagen - A pantalla completa en móvil, mitad en desktop */}
@@ -56,24 +56,27 @@ export default function HomeAboutSection() {
           </p>
         </div>
       </div>
-      <div className="flex flex-row items-center justify-center gap-4 lg:gap-8">
-        
-        <div className="w-1/2 grid grid-cols-1 gap-6 items-start">
-        <p className="max-w-3xl text-left text-lg font-normal text-[#6D6D6D] lg:text-2xl lg:leading-[40px]">
-          Nos comprometemos a ofrecer un cuidado integral y profesional,
-          poniendo a cada residente en el centro de nuestras decisiones.
-          Promovemos la dignidad, la autonomía y el respeto, asegurándonos de
-          que nuestros cuidados respondan a las necesidades individuales de
-          quienes confían en nosotros, en un entorno cálido y acogedor donde se
-          sientan siempre cuidados y valorados.
-        </p>
-        <NavLink to="/#contacto">
-          <Button className="mt-4 h-11 w-full rounded-full bg-[#0033A1] px-11 py-4 text-sm font-medium uppercase tracking-wider text-white transition-colors duration-300 hover:bg-blue-800 lg:mt-8 lg:w-fit">
-            Quiero saber más
-          </Button>
-        </NavLink>
+      <div className="flex flex-col items-center justify-center gap-8 lg:flex-row lg:gap-8">
+        <div className="order-2 grid w-full grid-cols-1 items-start gap-6 lg:order-1 lg:w-1/2">
+          <p className="max-w-3xl text-left text-lg font-normal text-[#6D6D6D] lg:text-2xl lg:leading-[40px]">
+            Nos comprometemos a ofrecer un cuidado integral y profesional,
+            poniendo a cada residente en el centro de nuestras decisiones.
+            Promovemos la dignidad, la autonomía y el respeto, asegurándonos de
+            que nuestros cuidados respondan a las necesidades individuales de
+            quienes confían en nosotros, en un entorno cálido y acogedor donde se
+            sientan siempre cuidados y valorados.
+          </p>
+          <NavLink to="/#contacto" className="w-full sm:w-fit">
+            <Button className="mt-4 h-11 w-full rounded-full bg-[#0033A1] px-11 py-4 text-sm font-medium uppercase tracking-wider text-white transition-colors duration-300 hover:bg-blue-800 lg:mt-8 lg:w-fit">
+              Quiero saber más
+            </Button>
+          </NavLink>
         </div>
-        <img src={AboutUsImage} alt="" className="w-1/2 rounded-2xl object-cover object-center" />
+        <img
+          src={AboutUsImage}
+          alt=""
+          className="order-1 aspect-[4/5] w-full rounded-2xl object-cover object-center lg:order-2 lg:w-1/2"
+        />
       </div>
     </section>
   );
